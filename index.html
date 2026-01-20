@@ -1,6 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #0b5ed7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.services li {
+  margin-bottom: 8px;
+}
+
+.contact-box {
+  background: #f0f4ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: #0b5ed7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #094bb5;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+</style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M.J Plumbing Services</title>
@@ -11,7 +95,53 @@
 
 </section>
 
-</body>
+</<div class="container">
+
+  <h1>M.J Plumbing Services</h1>
+  <p class="tagline">Reliable • Professional • Affordable</p>
+
+  <p>
+    📞 <a href="tel:+2349135582770">+234 913 558 2770</a>  
+    <br>
+    💬 <a href="https://wa.me/2349135582770" target="_blank">Chat on WhatsApp</a>
+  </p>
+
+  <div class="section">
+    <h2>About Us</h2>
+    <p>
+      We provide trusted plumbing solutions for homes and businesses.
+      Quality workmanship and fast response guaranteed.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Our Services</h2>
+    <ul class="services">
+      <li>Pipe Repairs & Installation</li>
+      <li>Leak Detection</li>
+      <li>Drain Cleaning</li>
+      <li>Bathroom & Kitchen Plumbing</li>
+      <li>Emergency Plumbing</li>
+    </ul>
+  </div>
+
+  <div class="section contact-box">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>📍 Address: Your Business Address</p>
+    <p>© 2026 M.J Plumbing Services</p>
+  </div>
+
+</div>
 </html>
 <header>
   <h1>M.J Plumbing Services</h1>
@@ -43,6 +173,18 @@ function sendToWhatsApp() {
 
   var url = "https://wa.me/" + phone + "?text=" + text;
   window.open(url, "_blank");
+}
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const phone = "2349135582770";
+  const text =
+    `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+  window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
 }
 </script>
 <section>
