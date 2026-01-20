@@ -1,66 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-body
-}
-</style>
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M.J Plumbing Services</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0b5ed7, #084298);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+
+    header p {
+      margin: 10px 0 20px;
+      font-size: 1.1rem;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      background: white;
+      color: #0b5ed7;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .cta-buttons a.whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0b5ed7;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      width: 100%;
+      padding: 14px;
+      background: #25d366;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0b5ed7;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-<section style="text-align:center; padding:60px 20px;">
 
+<header>
+  <h1>M.J Plumbing Services</h1>
+  <p>Reliable • Professional • Affordable</p>
+  <div class="cta-buttons">
+    <a href="tel:+2349135582770">📞 Call Now</a>
+    <a class="whatsapp" href="https://wa.me/2349135582770" target="_blank">💬 WhatsApp</a>
+  </div>
+</header>
+
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    We provide trusted plumbing solutions for homes and businesses. With quality workmanship,
+    fast response times, and honest pricing, M.J Plumbing Services is your go-to plumbing expert.
+  </p>
 </section>
 
-</<div class="container">
-
-  <h1>M.J Plumbing Services</h1>
-  <p class="tagline">Reliable • Professional • Affordable</p>
-
-  <p>
-    📞 <a href="tel:+2349135582770">+234 913 558 2770</a>  
-    <br>
-    💬 <a href="https://wa.me/2349135582770" target="_blank">Chat on WhatsApp</a>
-  </p>
-
-  <div class="section">
-    <h2>About Us</h2>
-    <p>
-      We provide trusted plumbing solutions for homes and businesses.
-      Quality workmanship and fast response guaranteed.
-    </p>
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">Pipe Repairs & Installation</div>
+    <div class="service-box">Leak Detection</div>
+    <div class="service-box">Drain Cleaning</div>
+    <div class="service-box">Bathroom & Kitchen Plumbing</div>
+    <div class="service-box">Emergency Plumbing</div>
   </div>
+</section>
 
-  <div class="section">
-    <h2>Our Services</h2>
-    <ul class="services">
-      <li>Pipe Repairs & Installation</li>
-      <li>Leak Detection</li>
-      <li>Drain Cleaning</li>
-      <li>Bathroom & Kitchen Plumbing</li>
-      <li>Emergency Plumbing</li>
-    </ul>
-  </div>
-
-  <div class="section contact-box">
-    <h2>Contact Us</h2>
-
+<section>
+  <h2>Contact Us</h2>
+  <div class="contact">
     <form onsubmit="sendWhatsApp(); return false;">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send via WhatsApp</button>
     </form>
   </div>
+</section>
 
-  <div class="footer">
-    <footer>
-  <p>📍 Address: 32 amechi road beside romchi hotel opposite romch fuel station Amechi road
-  awkunawnaw Enugu south</p>
+<footer>
+  <p>📍 Address:32 amechi road beside romchi hotel opposite romch fuel station Amechi road awkunawnaw Enugu south </p>
+  <p>📞 <a href="tel:+2349135582770">+234 913 558 2770</a></p>
   <p>© 2026 M.J Plumbing Services</p>
 </footer>
+
+<script>
+  function sendWhatsApp() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    window.open(`https://wa.me/2349135582770?text=${text}`, '_blank');
+  }
+</script>
 
 </body>
 </html>
